@@ -1,0 +1,45 @@
+.container-anotacao{
+    border: 1px solid #DFE0E7;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fff;
+    width: 380px;
+    height: fit-content;
+
+    @media(max-width: 649px){
+        width: 100%;
+    }
+
+    h2{
+        font-size: 16px;
+        line-height: 100%;
+        font-weight: 700;
+        color: #363E48;
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 130%;
+        font-weight: 400;
+        color: #415164;
+    }
+
+    
+    .image-row {
+        display: flex;
+        gap: 16px;
+        margin: 8px 0;
+        
+        img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        object-fit: cover;
+        }
+    }
+    
+
+          
+
+
+}

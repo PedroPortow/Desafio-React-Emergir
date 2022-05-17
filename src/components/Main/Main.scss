@@ -1,0 +1,24 @@
+#main{
+    background:#F5F6FA;
+
+    padding: 40px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-height: 90vh;
+
+    // @include mixins.mobile-mini
+    //     padding-bottom: 24px
+}
+#mainWrapper{
+        display: flex;
+        flex-direction: row;
+
+        gap: 24px;
+        
+        // background: green
+        // @include mixins.mobile-mini
+        //     flex-direction: column
+}
+
