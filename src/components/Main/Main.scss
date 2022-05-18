@@ -20,5 +20,15 @@
         // background: green
         // @include mixins.mobile-mini
         //     flex-direction: column
+
+            .outside-title-talhao {
+                font-weight: 600;
+                font-size: 20px;
+                color: #363E48;
+                line-height: 100%;
+                letter-spacing: -0.02em;
+                margin-bottom: 8px;
+              }
+        
 }
 

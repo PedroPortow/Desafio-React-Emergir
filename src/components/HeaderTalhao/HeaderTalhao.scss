@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+.container-100w {
+    border: 1px solid #DFE0E7;
+    border-radius: 8px;
+    
+    background: #fff;
+    display: flex;
+    margin-bottom: 16px;
+    max-width: 776px;
+    flex-shrink: 1;
+  
+    @media (max-width: 1049px) {
+      max-width: 380px;
+    }
+  
+    @media (max-width: 649px) {
+      max-width: 100%;
+    }
+  
+    &-first-section {
+      width: 472px;
+      border-right: 1px solid #E7E8EF;
+      padding: 16px;
+  
+      @media (max-width: 768px) {
+        width: 370px;
+      }
+  
+      @media (max-width: 1049px) {
+        background: blue;
+      }
+  
+      @media (max-width: 649px) {
+        width: 100%;
+        background: pink;
+      }
+      h2 {
+        font-size: 16px;
+  
+        line-height: 100%;
+  
+        font-weight: 700;
+  
+        color: #363E48;
+  
+        span {
+          background: #fff;
+          border-radius: 4px;
+          border: 1px solid #E7E8EF;
+          color: #798AA4;
+          font-weight: 400;
+          font-size: 12px;
+          width: 49px;
+          height: 16px;
+          padding: 2px 4px;
+          margin-left: 8px;
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        color: #627389;
+        margin: 4px 0px;
+      }
+      span {
+        width: 65px;
+        height: 16px;
+        padding: 2px 8px;
+        border: 1px solid #739E08;
+        border-radius: 32px;
+        font-family: 'Roboto';
+        font-size: 12px;
+        font-weight: 700;
+        color: #57760A;
+      }
+    }
+    &-second-section {
+      width: 242px;
+      border-right: 1px solid #E7E8EF;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      @media (max-width: 1049px) {
+        display: none;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        // border: 1px solid red;
+        width: 100%;
+        justify-content: space-between;
+  
+        h3 {
+          font-weight: 400;
+          font-size: 12px;
+          color: #20252B;
+          text-align: start;
+        }
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          color: #798AA4;
+          text-align: end;
+        }
+      }
+    }
+    
+    &-third-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 62px;
+  
+      i {
+        color: #798AA4;
+        cursor: pointer;
+      }
+    }
+    .card-row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-shrink: 1;
+      max-width: 776px;
+      gap: 16px;
+            // background: red
+      margin-bottom: 16px;
+    }
+  }

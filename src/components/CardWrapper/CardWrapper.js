@@ -14,7 +14,7 @@ function CardWrapper() {
     if(el.location_type === 'Farm') return el
   })
 
-  console.log(notesFarm)
+  // console.log(notesFarm)
 
   return (
   
