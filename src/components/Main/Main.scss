@@ -8,8 +8,9 @@
     flex: 1;
     min-height: 90vh;
 
-    // @include mixins.mobile-mini
-    //     padding-bottom: 24px
+    @media(max-width: 649px){
+        padding-bottom: 24px
+    }
 }
 #mainWrapper{
         display: flex;
@@ -17,10 +18,11 @@
 
         gap: 24px;
         
+       
         // background: green
-        // @include mixins.mobile-mini
-        //     flex-direction: column
-
+        @media(max-width: 649px){
+           flex-direction: column;
+        }
             .outside-title-talhao {
                 font-weight: 600;
                 font-size: 20px;
@@ -29,6 +31,11 @@
                 letter-spacing: -0.02em;
                 margin-bottom: 8px;
               }
-        
+
+        .main-cards-wrapper{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
 }
 

@@ -1,9 +1,9 @@
-// import React from 'react'
+import React from 'react'
 
-// function FetchContext() {
-//   return (
-//     <div>FetchContext</div>
-//   )
-// }
+function FetchContext() {
+  return (
+    <div>FetchContext</div>
+  )
+}
 
-// export default FetchContext
+export default FetchContext

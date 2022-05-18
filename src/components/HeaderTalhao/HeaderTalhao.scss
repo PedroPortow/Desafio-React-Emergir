@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 
+.rotateimg180{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
 .container-100w {
     border: 1px solid #DFE0E7;
     border-radius: 8px;
@@ -9,7 +17,11 @@
     margin-bottom: 16px;
     max-width: 776px;
     flex-shrink: 1;
+    
   
+    .fa-solid{
+      transition: 0.5s;
+    }
     @media (max-width: 1049px) {
       max-width: 380px;
     }
@@ -18,6 +30,7 @@
       max-width: 100%;
     }
   
+
     &-first-section {
       width: 472px;
       border-right: 1px solid #E7E8EF;
@@ -28,12 +41,12 @@
       }
   
       @media (max-width: 1049px) {
-        background: blue;
+        
       }
   
       @media (max-width: 649px) {
         width: 100%;
-        background: pink;
+        // background: pink;
       }
       h2 {
         font-size: 16px;
