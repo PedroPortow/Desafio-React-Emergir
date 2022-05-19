@@ -7,7 +7,7 @@ function Header() {
   return (
     <header>
         <div className="textWrapper">
-            <i class="fa fa-book" />
+            <i className="fa fa-book" />
             <h1> Relatório de visita técnica</h1>
         </div>
         <div className="logoWrapper">

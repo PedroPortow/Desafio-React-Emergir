@@ -1,12 +1,8 @@
 import React from 'react'
 import './Aside.scss'
-import {useContext} from 'react'
-import { DataContext } from '../../Context/DataContext'
 import { useQuery } from 'react-query'
-import { useFetch } from "../../hooks/useFetch";
 import FetchFarmAside from '../FetchData/DataFarmAside'
 import FetchRainAside from '../FetchData/DataRainAside'
-import logo from '../../images/logo-check.png'
 
 
 function Aside() {
@@ -16,9 +12,6 @@ function Aside() {
    
    const {data: dataRain, status: rainStatus} = useQuery('dataRain', FetchRainAside)
      
-//    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-//    <div class="loader">Loading...</div>
-// </div>
    if(farmStatus === 'loading') {
       return ( 
          <aside className="aside-container">
@@ -26,17 +19,26 @@ function Aside() {
          </aside>
       )
    }
+
    if(farmStatus === 'error') {
-      return <p>deu erro</p>
+      return (
+         <aside className="aside-container">
+            <p className='erroP'>Algo deu errado com sua requisição</p>
+         </aside>
+      )
    }
 
    if(rainStatus === 'loading') {
-      return <p>Dados carregando...</p>
+      return ( 
+   <aside className="aside-container">
+      <div className="loader">Loading...</div>
+   </aside>
+   )
+
    }
    if(rainStatus === 'error') {
-      return <p>deu erro</p>
+      return <p>Algo deu errado com sua requisição</p>
    }
-   console.log(dataRain)
 
   return (
     <aside className="aside-container">

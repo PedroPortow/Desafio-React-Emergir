@@ -1,6 +1,4 @@
 import React, { useContext, useState, useRef} from 'react'
-import { useQuery } from 'react-query'
-import { DataContext } from '../../Context/DataContext'
 import Card from '../Card/Card'
 import './HeaderTalhao.scss'
 
@@ -18,8 +16,7 @@ function HeaderTalhao({el, notesPlantationType, index}) {
  
  
   return (
-    <React.Fragment key={el.id}>
-     
+    <>
         <div className="container-100w" key={el.id} >
             <div className="container-100w-first-section">
                 <h2 >{el.name} <span>{el.cycle}º ciclo</span></h2>
@@ -57,12 +54,12 @@ function HeaderTalhao({el, notesPlantationType, index}) {
           ?
           (<Card 
           key={note.id}
-          note={note} />)
+          note={note}/>)
           : ''
           ))
           }
         </div>
-      </React.Fragment>
+      </>
 
   )
 }
