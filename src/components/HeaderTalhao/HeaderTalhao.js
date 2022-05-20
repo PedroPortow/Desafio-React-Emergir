@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef} from 'react'
+import React, {useState, useRef} from 'react'
 import Card from '../Card/Card'
 import './HeaderTalhao.scss'
 
@@ -6,14 +6,13 @@ import './HeaderTalhao.scss'
 function HeaderTalhao({el, notesPlantationType, index}) {
 
     const arrow = useRef()
-    //Estado open ou closed
-    const [active, setActive] = useState(index == 0)
-
+    
+    //Funcionalidade aberto ou fechado do talhão
+    const [active, setActive] = useState(index === 0)
     const handleOpen = () => {
       arrow.current.classList.toggle('rotateimg180')
       setActive(!active)
     }
- 
  
   return (
     <>
@@ -38,29 +37,20 @@ function HeaderTalhao({el, notesPlantationType, index}) {
                 </div>
             </div>
             <div className="container-100w-third-section">
-            {index === 0 ? <i className="fa-solid fa-angle-up" onClick={handleOpen} ref={arrow} /> :  <i className="fa-solid fa-angle-down" onClick={handleOpen} ref={arrow} />}
+            {index === 0 
+            ? <i className="fa-solid fa-angle-up" onClick={handleOpen} ref={arrow} />
+            : <i className="fa-solid fa-angle-down" onClick={handleOpen} ref={arrow} />}
             </div>
         </div>
         <div className='card-row'>
-        { 
-    
-        notesPlantationType 
-        &&
-        active
-        &&
-        notesPlantationType.map((note) => 
-        (
-          note && note.location.id === el.id 
-          ?
-          (<Card 
-          key={note.id}
-          note={note}/>)
-          : ''
-          ))
-          }
+        {notesPlantationType && active && notesPlantationType.map((note) => 
+        (note && note.location.id === el.id 
+        ? <Card 
+            key={note.id}
+            note={note}/>
+        : ''))}
         </div>
-      </>
-
+    </>
   )
 }
 

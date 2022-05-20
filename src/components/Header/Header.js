@@ -1,6 +1,5 @@
 import React from 'react'
 import './Header.scss'
-import {FaBeer} from 'react-icons/fa'
 import farmboxLogo from '../../images/logo-fb.png'
 
 function Header() {
