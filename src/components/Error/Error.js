@@ -5,7 +5,7 @@ import build from '../../images/web_developing.gif'
 function Error() {
   return (
     <div className="error">
-      <img src={build} alt='a' />
+      <img src={build} alt='building' />
       <p className='errorText'>Algo deu errado com sua requisição :(</p>
     
     </div>

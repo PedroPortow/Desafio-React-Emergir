@@ -2,10 +2,10 @@ import './App.scss';
 
 //React Query and DataFetcher
 import { useQuery } from 'react-query';
-import FetchFarmAside from './components/FetchData/DataFarmAside';
-import FetchDataNotes from './components/FetchData/DataNotes';
-import FetchDataPlantation from './components/FetchData/DataPlantation';
-import FetchRainAside from './components/FetchData/DataRainAside';
+import FetchFarmAside from './Fetch/DataFarmAside';
+import FetchDataNotes from './Fetch/DataNotes';
+import FetchDataPlantation from './Fetch/DataPlantation';
+import FetchRainAside from './Fetch/DataRainAside';
 
 //Componentes
 import Header from './components/Header/Header';
@@ -17,8 +17,8 @@ import Error from './components/Error/Error';
 function App() {
   
   //Fetch data com React Query
-  const {data: notesData, isLoading: isLoadingNotes, error: errorNotes} = useQuery('dataNotes', FetchDataNotes)
-  const {data: plantationData, isLoading: isLoadingPlant, error: errorPlant} = useQuery('dataPlantation', FetchDataPlantation)
+  const {data: dataNotes, isLoading: isLoadingNotes, error: errorNotes} = useQuery('dataNotes', FetchDataNotes)
+  const {data: dataPlantation, isLoading: isLoadingPlant, error: errorPlant} = useQuery('dataPlantation', FetchDataPlantation)
   const {data: dataFarm, isLoading: isLoadingFarm, error: errorFarm} = useQuery('dataFarm', FetchFarmAside)
   const {data: dataRain, isLoading: isLoadingRain, error: errorRain} = useQuery('dataRain', FetchRainAside)
 
@@ -36,8 +36,8 @@ function App() {
       {isLoading ?
        <Loader /> : 
        <Main 
-          notesData={notesData} 
-          plantationData={plantationData} 
+          dataNotes={dataNotes} 
+          dataPlantation={dataPlantation} 
           dataFarm={dataFarm} 
           dataRain={dataRain} />}
       <Footer />
