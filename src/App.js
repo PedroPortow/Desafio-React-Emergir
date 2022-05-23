@@ -35,7 +35,11 @@ function App() {
       <Header />
       {isLoading ?
        <Loader /> : 
-       <Main notesData={notesData} plantationData={plantationData} dataFarm={dataFarm} dataRain={dataRain} />}
+       <Main 
+          notesData={notesData} 
+          plantationData={plantationData} 
+          dataFarm={dataFarm} 
+          dataRain={dataRain} />}
       <Footer />
     </div>
   );
